@@ -1,25 +1,31 @@
-#Learn more about Jenkins and JENKINS_HOME directory for which this file is intended.
-#  http://jenkins-ci.org/
-#  https://wiki.jenkins-ci.org/display/JENKINS/Administering+Jenkins
 
-#ignore all JENKINS_HOME except jobs directory, root xml config, and .gitignore file
-/*
-!/jobs
-!/.gitignore
-!/*.xml
+# Created by https://www.gitignore.io/api/windows
+# Edit at https://www.gitignore.io/?templates=windows
 
-#ignore all files in jobs subdirectories except for folders
-#note: git doesn't track folders, only file content
-jobs/**
-!jobs/**/
+### Windows ###
+# Windows thumbnail cache files
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
 
-#uncomment the following line to save next build numbers with config
-#!jobs/**/nextBuildNumber
+# Dump file
+*.stackdump
 
-#exclude only config.xml files in repository subdirectories
-!config.xml
+# Folder config file
+[Dd]esktop.ini
 
-#don't track workspaces (when users build on the master)
-jobs/**/*workspace
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
 
-#as a result only settings and job config.xml files in JENKINS_HOME will be tracked by git
+# Windows Installer files
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# End of https://www.gitignore.io/api/windows
